@@ -5,7 +5,7 @@ A retro-styled interactive portfolio inspired by **'Old Mainframes' and classic 
 
 
 ## 🚀 Live Demo
-In process...
+https://luciabelenleivaportfolio-2025.vercel.app/
 
 ## 🛠️ Built With
 * **HTML5** - Semantic structure.
