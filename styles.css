@@ -113,7 +113,7 @@ footer {
 h5 {
     font-size: 8px;
     color: inherit;
-    margin-left: 90px !important; 
+    margin-left: 90px; 
     font-family: 'Courier New', Courier, monospace;
     font-weight: normal;
     text-align: left;
@@ -121,7 +121,7 @@ h5 {
 
 @media screen and (max-width: 600px) {
     h5 {
-        margin-left: 50px !important;
+        margin-left: 50px;
         font-size: 10px;
         padding-right: 10px;
     }
@@ -261,18 +261,18 @@ header h1, #game-container, #status, #startBtn, #terminal {
     }
 
     header h1, #game-container, #status, #startBtn, #terminal {
-        margin-left: 50px !important;
+        margin-left: 50px;
         font-size: 14px;
     }
 
     #ascii-logo {
-        font-size: 5px !important;
-        margin-left: 45px !important;
+        font-size: 5px;
+        margin-left: 45px;
     }
 }
 
 #click-to-start .hint {
-  font-size: 12px;
+  font-size: 18px;
   opacity: 0.4;
   max-width: 480px;
   line-height: 1.3;
@@ -304,3 +304,37 @@ body.theme-reader #egg-container {
 #egg-container i {
   color: currentColor;
 }
+
+
+@media screen and (max-width: 600px) {
+    
+
+
+     header h1 {
+        font-size: 2rem;  
+        line-height: 2.2rem;         
+    }
+
+       .game-btn:hover {
+        transform: translateY(-1px); 
+        box-shadow: 0 0 6px currentColor;
+    }
+    
+    #game-container,
+    #status,
+    #terminal {
+        font-size: 1.2rem ; 
+        line-height: 1.5em;
+    }
+
+     
+    .game-btn {
+        font-size: 1.2rem ;
+        padding: 12px 18px;
+    }
+
+     
+
+      }
+
+   
