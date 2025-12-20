@@ -1,6 +1,6 @@
 # 📟 Lucia Belen Leiva | Web Developer Portfolio
 
-A retro-styled interactive portfolio inspired by **'Old Mainframes' and classic terminal interfaces. This project showcases my journey from education to technology, featuring an interactive trivia game and an ASCII-art interface.
+A retro-styled interactive portfolio inspired by **'Old Mainframes'** and classic terminal interfaces. This project showcases my journey from education to technology, featuring an interactive trivia game and an ASCII-art interface.
 
 
 
