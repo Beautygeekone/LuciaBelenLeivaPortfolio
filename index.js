@@ -342,14 +342,8 @@ const talkingFace = `
 
 let talkingInterval = null;
 
-function showIdle() {
-    gameDiv.innerHTML = ""; 
-    const introText = ">> BOOT_PRIORITY: HIGH\n>> ANALYZING USER...\n>> IS_IT_A_GAME? LET'S_DISCOVER_IT.";
-    
-    typeText(introText, 40, () => {
-        gameDiv.innerHTML += '<span class="cursor">_</span>';
-    });
-}
+
+
 function showIdle() {
   clearInterval(talkingInterval);
   face.textContent = idleFace;
@@ -384,7 +378,7 @@ function typeText(text, speed = 40, callback) {
     }
   }, speed);
 }
-
+ 
 
 function startSequence() {
   typeText("System initialized. Welcome, Guest. Would you like to access Lucía Belén Leiva's credentials and professional history?", 40, () => {
@@ -467,7 +461,11 @@ const questions = [
 const easterEggOptions = [
   { code: "HARRYPOTTER", hint: "The boy who lived...with a lightning scar." },
   { code: "CHOCOLATE", hint: "A sweet treat made from cocoa beans." },
-  { code: "THEBEATLES", hint: "The legendary 'Fab Four' band from Liverpool." }
+  { code: "THEBEATLES", hint: "The legendary 'Fab Four' band from Liverpool." },
+  { code: "RESIDENTEVIL4", hint: "A Resident Evil game about rescuing the president's daughter in a rural village." },
+  { code: "PISCIS", hint: "A zodiac sign associated with water and intuition." },
+  { code: "PIZZA", hint: "A popular savory food made with dough, cheese, and toppings." },
+  { code: "HENRYCAVILL", hint: "An actor known for playing Superman and Geralt of Rivia." }
 ];
 
 const selectedEgg = easterEggOptions[Math.floor(Math.random() * easterEggOptions.length)];
@@ -508,16 +506,22 @@ window.checkAnswer = function(answer, index) {
 function showEasterEggPrompt() {
   gameDiv.innerHTML = `
     <div id="egg-container">
-      <p style="color: rgb(66, 144, 66)" font-family: 'Courier New', Courier, monospace;><strong>INPUT_REQUIRED: LUCIA_FAVOURITE_THING.EXE // MODE: NO_SPACES_ALLOWED</strong></p>
-      <p style="color: rgb(66, 144, 66); "><i>Hint: ${selectedEgg.hint}</i></p>
-      <input id="easterInput" type="text" placeholder="Type here..." style="text-transform:uppercase"/>
+      <p class="egg-title">
+        <strong>INPUT_REQUIRED: LUCIA_FAVOURITE_THING.EXE // MODE: NO_SPACES_ALLOWED</strong>
+      </p>
+      <p class="egg-hint">
+        <i>Hint: ${selectedEgg.hint}</i>
+      </p>
+      <input
+        id="easterInput"
+        type="text"
+        placeholder="TYPE HERE..."
+      />
       <button id="submitEgg" type="button">Submit Code</button>
-    </div>`;
-
-  
-  const btn = document.getElementById("submitEgg");
-  if (btn) btn.onclick = checkEasterEgg;
+    </div>
+  `;
 }
+
 
 function checkEasterEgg() {
   const inputEl = document.getElementById("easterInput");
@@ -528,8 +532,8 @@ function checkEasterEgg() {
   if (input === selectedEgg.code) {
     if (typeof playBeep === "function") playBeep(800);
     gameDiv.innerHTML = `
-      <h3>ACCESS GRANTED</h3>
-      <p style="color: rgb(66, 144, 66);" font-family: 'Courier New', Courier, monospace;>Mail: <a href="mailto:leivalbelen@abc.gob.ar" style="color:rgb(66, 144, 66);">leivalbelen@abc.gob.ar</a> Github: BeautyGeekOne.</p>`;
+      <h3>ACCESS GRANTED!!</h3>
+      <p style="color: inherit;" font-family: 'Courier New', Courier, monospace;>Mail: <a href="mailto:leivalbelen@abc.gob.ar" style="color #fff;">leivalbelen@abc.gob.ar</a> Github: BeautyGeekOne.</p>`;
   } else {
     if (typeof playBeep === "function") playBeep(150);
     gameDiv.innerHTML = "";
@@ -547,6 +551,28 @@ function startMiniGame() {
 }
 
 
+const themes = ["theme-cyberpunk", "theme-reader", "theme-default"];
+
+function setTheme(theme) {
+  document.body.classList.remove(...themes);
+  document.body.classList.add(theme);
+}
+
+document.addEventListener("keydown", (e) => {
+  if (e.ctrlKey && e.altKey && e.key.toLowerCase() === "c") {
+    setTheme("theme-cyberpunk");
+  }
+
+  if (e.ctrlKey && e.altKey && e.key.toLowerCase() === "r") {
+    setTheme("theme-reader");
+  }
+
+  if (e.ctrlKey && e.altKey && e.key.toLowerCase() === "d") {
+    setTheme("theme-default");
+  }
+});
+
+
 const overlay = document.getElementById("click-to-start");
 
 overlay.addEventListener("click", () => {
@@ -560,4 +586,6 @@ startBtn.addEventListener("click", () => {
   startBtn.style.display = "none";
   startMiniGame();
 }); 
+
 });
+
