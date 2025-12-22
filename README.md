@@ -18,6 +18,10 @@ https://luciabelenleivaportfolio-2025.vercel.app/
 * **Responsive Design:** Adapted for both desktop and mobile "cibernetic" visitors.
 * **ASCII Art:** Custom character representation for a unique visual identity.
 
+<a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/Zqhg2pWZ/portfolio.jpg' border='0' alt='portfolio'></a>
+
+
+
 ## 📂 Project Structure
 ```text
 .
@@ -25,3 +29,6 @@ https://luciabelenleivaportfolio-2025.vercel.app/
 ├── style.css       # COBOL & Terminal styling
 ├── script.js       # Typing effects and game logic
 └── README.md       # Project documentation
+
+
+
