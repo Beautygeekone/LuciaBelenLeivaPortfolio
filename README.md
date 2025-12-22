@@ -20,6 +20,8 @@ https://luciabelenleivaportfolio-2025.vercel.app/
 
 <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/Zqhg2pWZ/portfolio.jpg' border='0' alt='portfolio'></a>
 
+<a href='https://postimg.cc/87Jmsy5b' target='_blank'><img src='https://i.postimg.cc/2STccMNg/portfolio1.jpg' border='0' alt='portfolio1'></a>
+
 
 
 ## 📂 Project Structure
